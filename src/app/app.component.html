@@ -372,7 +372,7 @@
 
       </div>
       <div class="title">
-        BASIC SKILLS
+        {{this.currentSkill.title}}
       </div>
 
     </div>
@@ -383,26 +383,28 @@
         </i>
         <div>RECOMMANDED</div>
         <ul>
-          <li>
-            Learn HTML
-
-          </li>
-          <li>
-            Basic of CSS
-
-          </li>
-          <li>
-            Basics of Javascript
-
-          </li>
+          <ng-container *ngFor="let skill of this.currentSkill.recommand">
+            <li [ngClass]="{'active':skill.learned}">
+              {{skill.name}}
+            </li>
+          </ng-container>
         </ul>
       </div>
-      <div class="optional inactive">
+      <div class="optional" [ngClass]="{'inactive': this.currentSkill.optional.length === 0}">
 
         <i class="material-icons">
           filter_tilt_shift
         </i>
+        <div>OPTIONAL</div>
+        <ul>
+          <ng-container *ngFor="let skill of this.currentSkill.optional">
+            <li [ngClass]="{'active':skill.learned}">
+              {{skill.name}}
+            </li>
+          </ng-container>
+        </ul>
       </div>
+
     </div>
 
   </div>

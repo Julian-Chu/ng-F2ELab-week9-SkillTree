@@ -1,4 +1,4 @@
-class Skill{
-  name:string = "";
-  learned: boolean = true;
+class Skill {
+  name = "";
+  learned = true;
 }
