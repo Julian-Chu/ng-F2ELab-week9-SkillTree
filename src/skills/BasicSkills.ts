@@ -1,7 +1,9 @@
+import SkillIcons from "../enums/SkillIcons";
+import SkillSubtreeNode from "./SkillSubtreeNode";
 class BasicSkills implements SkillSubtreeNode {
-  imgPath = "";
+  icon = SkillIcons.BasicSkills;
   title = "BASIC SKILLS";
-  recommand: Array<Skill> = [
+  recommend: Array<Skill> = [
     { name: "Learn HTML", learned: false },
     { name: "Basic of CSS", learned: false },
     { name: "Basics of Javascript", learned: false }

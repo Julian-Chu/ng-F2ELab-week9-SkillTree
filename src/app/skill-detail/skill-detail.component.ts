@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
+import SkillSubtreeNode from "../../skills/SkillSubtreeNode";
 
 @Component({
   selector: "app-skill-detail",

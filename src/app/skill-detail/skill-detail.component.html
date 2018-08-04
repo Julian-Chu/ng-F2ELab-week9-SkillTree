@@ -1,7 +1,7 @@
 <div class="up">
   <div class="thumbnail">
     <i class="material-icons">
-      category
+      {{this.currentSkill?.icon}}
     </i>
 
   </div>
@@ -15,9 +15,9 @@
     <i class="material-icons">
       settings
     </i>
-    <div>RECOMMANDED</div>
+    <div>RECOMMENDED</div>
     <ul>
-      <ng-container *ngFor="let skill of this.currentSkill.recommand">
+      <ng-container *ngFor="let skill of this.currentSkill.recommend">
         <li [ngClass]="{'active':skill.learned}">
           {{skill.name}}
         </li>

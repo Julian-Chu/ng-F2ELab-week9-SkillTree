@@ -1,7 +1,11 @@
+import SkillIcons from "../enums/SkillIcons";
+
 interface SkillSubtreeNode {
-  imgPath: string;
+  icon: SkillIcons;
   title: string;
-  recommand: Array<Skill>;
+  recommend: Array<Skill>;
 
   optional: Array<Skill>;
 }
+
+export default SkillSubtreeNode;
