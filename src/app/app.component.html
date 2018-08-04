@@ -364,48 +364,6 @@
     </div>
   </div>
   <div class="skill-detail">
-    <div class="up">
-      <div class="thumbnail">
-        <i class="material-icons">
-          category
-        </i>
-
-      </div>
-      <div class="title">
-        {{this.currentSkill.title}}
-      </div>
-
-    </div>
-    <div class="down">
-      <div class="recommended">
-        <i class="material-icons">
-          settings
-        </i>
-        <div>RECOMMANDED</div>
-        <ul>
-          <ng-container *ngFor="let skill of this.currentSkill.recommand">
-            <li [ngClass]="{'active':skill.learned}">
-              {{skill.name}}
-            </li>
-          </ng-container>
-        </ul>
-      </div>
-      <div class="optional" [ngClass]="{'inactive': this.currentSkill.optional.length === 0}">
-
-        <i class="material-icons">
-          filter_tilt_shift
-        </i>
-        <div>OPTIONAL</div>
-        <ul>
-          <ng-container *ngFor="let skill of this.currentSkill.optional">
-            <li [ngClass]="{'active':skill.learned}">
-              {{skill.name}}
-            </li>
-          </ng-container>
-        </ul>
-      </div>
-
-    </div>
-
+    <app-skill-detail [currentSkill]=this.currentSkill></app-skill-detail>
   </div>
 </div>
