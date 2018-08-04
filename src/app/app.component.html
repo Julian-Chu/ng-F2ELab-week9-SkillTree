@@ -31,13 +31,13 @@
               <i class="material-icons">
                 settings
               </i>
-              <span>{{this.basics[0].recommend.filter(skill=>skill.learned === true)}}/3</span>
+              <span>{{this.basics[0].learnedRecommendedSkills}}/{{this.basics[0].recommend.length}}</span>
             </div>
             <div class="optional">
               <i class="material-icons">
                 filter_tilt_shift
               </i>
-              <span>0/0</span>
+              <span>{{this.basics[0].learnedOptionalSkills}}/{{this.basics[0].optional.length}}</span>
             </div>
           </div>
         </div>

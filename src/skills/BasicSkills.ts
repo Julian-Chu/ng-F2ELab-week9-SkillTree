@@ -10,6 +10,13 @@ class BasicSkills implements SkillSubtreeNode {
   ];
 
   optional: Array<Skill> = [];
+  get learnedRecommendedSkills(): number {
+    return this.recommend.filter(skill => skill.learned === true).length;
+  }
+
+  get learnedOptionalSkills(): number {
+    return this.optional.filter(skill => skill.learned === true).length;
+  }
 }
 
 export default BasicSkills;
