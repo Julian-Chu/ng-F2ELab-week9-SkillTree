@@ -234,6 +234,11 @@ p {
   display: inline-block;
 }
 
+.skill-detail .down ul li.active {
+  background-color: #ff0093;
+  border: 2px solid #ff0093;
+}
+
 .skill-detail .down ul > li + li {
   margin-top: 3px;
 }
@@ -249,4 +254,3 @@ p {
 .inactive {
   display: none;
 }
-/*# sourceMappingURL=style.css.map */

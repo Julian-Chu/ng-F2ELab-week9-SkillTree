@@ -2,7 +2,7 @@ import SkillIcons from "../enums/SkillIcons";
 import SkillSubtreeNode from "./SkillSubtreeNode";
 import Skill from "./skill";
 
-class BasicSkills implements SkillSubtreeNode {
+class BasicSkills extends SkillSubtreeNode {
   icon = SkillIcons.BasicSkills;
   title = "BASIC SKILLS";
   recommend: Array<Skill> = [
@@ -12,13 +12,6 @@ class BasicSkills implements SkillSubtreeNode {
   ];
 
   optional: Array<Skill> = [];
-  get learnedRecommendedSkills(): number {
-    return this.recommend.filter(skill => skill.learned === true).length;
-  }
-
-  get learnedOptionalSkills(): number {
-    return this.optional.filter(skill => skill.learned === true).length;
-  }
 }
 
 export default BasicSkills;
