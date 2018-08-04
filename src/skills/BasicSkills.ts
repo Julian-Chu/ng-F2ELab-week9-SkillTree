@@ -1,5 +1,7 @@
 import SkillIcons from "../enums/SkillIcons";
 import SkillSubtreeNode from "./SkillSubtreeNode";
+import Skill from "./skill";
+
 class BasicSkills implements SkillSubtreeNode {
   icon = SkillIcons.BasicSkills;
   title = "BASIC SKILLS";

@@ -18,7 +18,7 @@
     <div>RECOMMENDED</div>
     <ul>
       <ng-container *ngFor="let skill of this.currentSkill.recommend">
-        <li [ngClass]="{'active':skill.learned}">
+        <li [ngClass]="{'active':skill.learned}" (click)="ChangeLearnedRecommend(skill.name, skill.learned)">
           {{skill.name}}
         </li>
       </ng-container>
@@ -32,7 +32,7 @@
     <div>OPTIONAL</div>
     <ul>
       <ng-container *ngFor="let skill of this.currentSkill.optional">
-        <li [ngClass]="{'active':skill.learned}">
+        <li [ngClass]="{'active':skill.learned}" (click)="ChangeLearnedOptional(skill.name, skill.learned)">
           {{skill.name}}
         </li>
       </ng-container>

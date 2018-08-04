@@ -1,4 +1,5 @@
 import SkillIcons from "../enums/SkillIcons";
+import Skill from "./skill";
 
 interface SkillSubtreeNode {
   icon: SkillIcons;
