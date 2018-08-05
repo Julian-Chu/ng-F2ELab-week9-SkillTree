@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
-import BasicSkills from "../skills/BasicSkills";
-import SkillSubtreeNode from "../skills/SkillSubtreeNode";
-import BasicTools from "../skills/BasicTools";
+import BasicSkills from "../models/BasicSkills";
+import SkillSubtreeNode from "../models/SkillSubtreeNode";
+import BasicTools from "../models/BasicTools";
 
 @Component({
   selector: "app-root",
