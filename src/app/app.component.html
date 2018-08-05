@@ -22,7 +22,7 @@
       </div>
       <div class="skill-subtree-nodes">
         <ng-container *ngFor="let skill of this.skillTree.basics">
-          <div class="skill-subtree-node" [ngClass]="{'active': skill===this.currentSkill}" (click)="this.isBasicsCompleted?null:ChangeCurrentSkill(skill)">
+          <div class="skill-subtree-node" [ngClass]="{'active': skill===this.currentSkill && this.skillTree.currentRank ===0}" (click)="this.skillTree.currentRank>0?null:ChangeCurrentSkill(skill)">
             <div class="thumbnail ">
               <i class="material-icons ">
                 {{skill.icon}}
