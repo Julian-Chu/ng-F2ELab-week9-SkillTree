@@ -4,14 +4,7 @@
   <div class="message-bar">
     <h1 class="pink">FRONT-END SKILL TREE</h1>
     <div class="h3 b-purple">CURRENT RANK</div>
-    <div class="h2 white">FRONT-END NOOB</div>
-    <div class="spacecraft">
-      <img src="../assets/icons/img-ship-noob.png" alt="">
-    </div>
-    <div class="message">
-
-      <p class="white">Welcome to aboard. Your mission is: Collect the resources and learn the skills to upgrade the ship. Good luck, captain! </p>
-    </div>
+    <app-current-rank [rank]="skillTree.currentRank"></app-current-rank>
   </div>
   <div class="skill-tree">
     <div class="skill-subtree" [ngClass]="{

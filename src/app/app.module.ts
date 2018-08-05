@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { SkillDetailComponent } from './skill-detail/skill-detail.component';
+import { CurrentRankComponent } from './current-rank/current-rank.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SkillDetailComponent
+    SkillDetailComponent,
+    CurrentRankComponent
   ],
   imports: [
     BrowserModule
