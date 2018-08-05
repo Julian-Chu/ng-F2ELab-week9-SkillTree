@@ -3,7 +3,7 @@ import SkillSubtreeNode from "./SkillSubtreeNode";
 import Skill from "./skill";
 
 class CssArchitecture extends SkillSubtreeNode {
-  icon = SkillIcons.CssPreprocessors;
+  icon = SkillIcons.CssArchitecture;
   title = "CSS ARCHITECTURE";
   recommend: Array<Skill> = [{ name: "OOCSS", learned: false }];
 
