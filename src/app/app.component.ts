@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import BasicSkills from "../skills/BasicSkills";
 import SkillSubtreeNode from "../skills/SkillSubtreeNode";
+import BasicTools from "../skills/BasicTools";
 
 @Component({
   selector: "app-root",
@@ -9,7 +10,7 @@ import SkillSubtreeNode from "../skills/SkillSubtreeNode";
 })
 export class AppComponent {
   title = "app";
-  basics = [new BasicSkills()];
+  basics = [new BasicSkills(), new BasicTools()];
   currentSkill: SkillSubtreeNode;
 
   /**
