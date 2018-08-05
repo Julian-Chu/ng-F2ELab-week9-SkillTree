@@ -13,7 +13,7 @@
 html,
 body {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -70,8 +70,8 @@ p {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 1024px;
   height: 768px;
 }
@@ -108,15 +108,24 @@ p {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
 .skill-tree .skill-subtree .logo {
   margin-right: 5px;
+}
+
+.skill-tree .skill-subtree:not(:last-child) .logo::after {
+  content: "";
+  height: calc(100% - 20px);
+  width: 20px;
+  background-color: white;
+  display: block;
+  margin: auto;
 }
 
 .skill-tree .skill-subtree .skill-subtree-nodes {
@@ -152,7 +161,7 @@ p {
   text-align: center;
 }
 
-.skill-tree .skill-subtree .skill-subtree-nodes .skill-subtree-node .skills i+span {
+.skill-tree .skill-subtree .skill-subtree-nodes .skill-subtree-node .skills i + span {
   vertical-align: 2px;
   font-size: 14px;
 }
@@ -160,23 +169,6 @@ p {
 .skill-tree .skill-subtree .skill-subtree-nodes .skill-subtree-node.active .thumbnail {
   background: #8000ff;
   border: 2px solid #ff0093;
-}
-
-.skill-tree .skill-subtree.completed:not(:last-child) .logo::after {
-  content: "";
-  height: calc(100% - 80px);
-  width: 20px;
-  background-color: white;
-  display: block;
-  margin: auto;
-}
-
-.skill-tree .skill-subtree.completed .skill-subtree-nodes .skill-subtree-node {
-  color: #8000ff;
-}
-
-.skill-tree .skill-subtree.inactive {
-  opacity: 0.5;
 }
 
 .skill-detail {
@@ -199,7 +191,7 @@ p {
   display: flex;
 }
 
-.skill-detail .up .thumbnail>.material-icons {
+.skill-detail .up .thumbnail > .material-icons {
   margin: 10px auto;
   font-size: 168px;
 }
@@ -247,11 +239,11 @@ p {
   border: 2px solid #ff0093;
 }
 
-.skill-detail .down ul>li+li {
+.skill-detail .down ul > li + li {
   margin-top: 3px;
 }
 
-.thumbnail>.material-icons {
+.thumbnail > .material-icons {
   font-size: 36px;
 }
 
