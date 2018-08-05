@@ -4,6 +4,11 @@ import SkillSubtreeNode from "../models/SkillSubtreeNode";
 import BasicTools from "../models/BasicTools";
 import SkillTree from "../models/Skilltree";
 import Skill from "../models/skill";
+import CssFramework from "../models/CssFramework";
+import CssPreprocessors from "../models/CssPreprocessors";
+import CssArchitecture from "../models/CssArchitecture";
+import CssSkills from "../models/CssSkills";
+import CssMastery from "../models/CssMastery";
 
 @Component({
   selector: "app-root",
@@ -21,7 +26,13 @@ export class AppComponent {
    */
   constructor() {
     this.skillTree.basics = [new BasicSkills(), new BasicTools()];
-    this.skillTree.css = [];
+    this.skillTree.css = [
+      new CssFramework(),
+      new CssPreprocessors(),
+      new CssArchitecture(),
+      new CssSkills(),
+      new CssMastery()
+    ];
     this.currentSkillSubtree = this.skillTree.basics;
     this.skillTree.currentRank = 0;
   }
