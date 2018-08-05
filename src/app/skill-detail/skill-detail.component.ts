@@ -22,7 +22,7 @@ export class SkillDetailComponent implements OnInit {
   }
   ChangeLearnedOptional(skillName: string, learned: boolean) {
     const renewedTarget = new Skill(skillName, !learned);
-    this.currentSkill.recommend = this.currentSkill.optional.map(
+    this.currentSkill.optional = this.currentSkill.optional.map(
       skill => (skill.name === skillName ? renewedTarget : skill)
     );
   }
