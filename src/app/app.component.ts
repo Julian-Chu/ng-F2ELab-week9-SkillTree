@@ -9,6 +9,13 @@ import CssPreprocessors from "../models/CssPreprocessors";
 import CssArchitecture from "../models/CssArchitecture";
 import CssSkills from "../models/CssSkills";
 import CssMastery from "../models/CssMastery";
+import WebDrawing from "../models/WebDrawing";
+import JavasciptSkills from "../models/javascriptSkills";
+import JavascriptFramework from "../models/JavascriptFramework";
+import JavascriptPreprocessors from "../models/JavascriptPreprocessors";
+import PackageManagers from "../models/PackageManagers";
+import TaskRunners from "../models/TaskRunners";
+import BuildTools from "../models/BuildTools";
 
 @Component({
   selector: "app-root",
@@ -33,6 +40,19 @@ export class AppComponent {
       new CssSkills(),
       new CssMastery()
     ];
+    this.skillTree.javascript = [
+      new BasicSkills(),
+      new WebDrawing(),
+      new JavasciptSkills(),
+      new JavascriptFramework(),
+      new JavascriptPreprocessors()
+    ];
+    this.skillTree.managers = [
+      new PackageManagers(),
+      new TaskRunners(),
+      new BuildTools()
+    ];
+
     this.currentSkillSubtree = this.skillTree.basics;
     this.skillTree.currentRank = 0;
   }
@@ -46,16 +66,22 @@ export class AppComponent {
   }
 
   CheckCompleted() {
-    const basicsRecommended = this.skillTree.basics
-      .map(obj => obj.recommend)
-      .reduce((a, b) => {
-        return [...a, ...b];
-      });
+    let rank = 0;
+    const items = ["basics", "css", "javascript", "managers"];
+    items.forEach(key => {
+      console.log(this.skillTree[key]);
+      const recommended = this.skillTree[key]
+        .map(obj => obj.recommend)
+        .reduce((a, b) => [...a, ...b]);
 
-    this.skillTree.currentRank =
-      basicsRecommended.filter(skill => skill.learned === true).length ===
-      basicsRecommended.length
-        ? 1
-        : 0;
+      if (
+        recommended.filter(skill => skill.learned === true).length ===
+        recommended.length
+      ) {
+        rank++;
+      }
+    });
+    this.skillTree.currentRank = rank;
+    console.log(rank);
   }
 }

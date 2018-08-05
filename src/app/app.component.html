@@ -74,117 +74,37 @@
         </ng-container>
       </div>
     </div>
-    <div class="skill-subtree ">
+    <div class="skill-subtree" [ngClass]="{'completed': this.skillTree.currentRank >2, 'inactive':this.skillTree.currentRank < 2 }">
       <div class="logo ">
         <img src="../assets/icons/img-planet-js.png " alt=" ">
       </div>
       <div class="skill-subtree-nodes ">
 
-        <div class="skill-subtree-node ">
-          <div class="thumbnail ">
-            <i class="material-icons ">
-              hdr_strong
-            </i>
-          </div>
-          <div class="skills ">
-            <div class="recommended ">
+        <ng-container *ngFor="let skill of this.skillTree.javascript">
+          <div class="skill-subtree-node" [ngClass]="{'active': skill===this.currentSkill && this.skillTree.currentRank ===2}" (click)="this.skillTree.currentRank === 2? ChangeCurrentSkill(skill):null">
+            <div class="thumbnail ">
               <i class="material-icons ">
-                settings
+                {{skill.icon}}
               </i>
-              <span>0/4</span>
+
             </div>
-            <div class="optional ">
-              <i class="material-icons ">
-                filter_tilt_shift
-              </i>
-              <span>0/0</span>
-            </div>
-          </div>
-        </div>
-        <div class="skill-subtree-node ">
-          <div class="thumbnail ">
-            <i class="material-icons ">
-              gradient
-            </i>
-          </div>
-          <div class="skills ">
-            <div class="recommended ">
-              <i class="material-icons ">
-                settings
-              </i>
-              <span>0/4</span>
-            </div>
-            <div class="optional ">
-              <i class="material-icons ">
-                filter_tilt_shift
-              </i>
-              <span>0/0</span>
+            <div class="skills ">
+              <div class="recommended ">
+                <i class="material-icons ">
+                  settings
+                </i>
+                <span>{{skill.learnedRecommendedSkills}}/{{skill.recommend.length}}</span>
+              </div>
+              <div class="optional ">
+                <i class="material-icons ">
+                  filter_tilt_shift
+                </i>
+                <span>{{skill.learnedOptionalSkills}}/{{skill.optional.length}}</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="skill-subtree-node ">
-          <div class="thumbnail ">
-            <i class="material-icons ">
-              format_quote
-            </i>
-          </div>
-          <div class="skills ">
-            <div class="recommended ">
-              <i class="material-icons ">
-                settings
-              </i>
-              <span>0/4</span>
-            </div>
-            <div class="optional ">
-              <i class="material-icons ">
-                filter_tilt_shift
-              </i>
-              <span>0/0</span>
-            </div>
-          </div>
-        </div>
-        <div class="skill-subtree-node ">
-          <div class="thumbnail ">
-            <i class="material-icons ">
-              developer_mode
-            </i>
-          </div>
-          <div class="skills ">
-            <div class="recommended ">
-              <i class="material-icons ">
-                settings
-              </i>
-              <span>0/4</span>
-            </div>
-            <div class="optional ">
-              <i class="material-icons ">
-                filter_tilt_shift
-              </i>
-              <span>0/0</span>
-            </div>
-          </div>
-        </div>
-        <div class="skill-subtree-node ">
-          <div class="thumbnail ">
-            <i class="material-icons ">
-              nfc
-            </i>
-          </div>
-          <div class="skills ">
-            <div class="recommended ">
-              <i class="material-icons ">
-                settings
-              </i>
-              <span>0/4</span>
-            </div>
-            <div class="optional ">
-              <i class="material-icons ">
-                filter_tilt_shift
-              </i>
-              <span>0/0</span>
-            </div>
-          </div>
-        </div>
+
+        </ng-container>
       </div>
 
     </div>
