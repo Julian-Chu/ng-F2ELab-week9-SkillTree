@@ -19,43 +19,43 @@
         <img src="../assets/icons/img-planet-basics.png" alt="">
       </div>
       <div class="skill-subtree-nodes">
-        <div class="skill-subtree-node active">
-          <div class="thumbnail">
-            <i class="material-icons">
+        <div class="skill-subtree-node" [ngClass]="{'active': this.basics[0]===this.currentSkill}" (click)="ChangeCurrentSkill(this.basics[0])">
+          <div class="thumbnail ">
+            <i class="material-icons ">
               {{this.basics[0].icon}}
             </i>
 
           </div>
-          <div class="skills">
-            <div class="recommended">
-              <i class="material-icons">
+          <div class="skills ">
+            <div class="recommended ">
+              <i class="material-icons ">
                 settings
               </i>
               <span>{{this.basics[0].learnedRecommendedSkills}}/{{this.basics[0].recommend.length}}</span>
             </div>
-            <div class="optional">
-              <i class="material-icons">
+            <div class="optional ">
+              <i class="material-icons ">
                 filter_tilt_shift
               </i>
               <span>{{this.basics[0].learnedOptionalSkills}}/{{this.basics[0].optional.length}}</span>
             </div>
           </div>
         </div>
-        <div class="skill-subtree-node">
-          <div class="thumbnail">
-            <i class="material-icons">
+        <div class="skill-subtree-node ">
+          <div class="thumbnail ">
+            <i class="material-icons ">
               build
             </i>
           </div>
-          <div class="skills">
-            <div class="recommended">
-              <i class="material-icons">
+          <div class="skills ">
+            <div class="recommended ">
+              <i class="material-icons ">
                 settings
               </i>
               <span>0/4</span>
             </div>
-            <div class="optional">
-              <i class="material-icons">
+            <div class="optional ">
+              <i class="material-icons ">
                 filter_tilt_shift
               </i>
               <span>0/0</span>
@@ -64,110 +64,110 @@
         </div>
       </div>
     </div>
-    <div class="skill-subtree">
-      <div class="logo">
-        <img src="../assets/icons/img-planet-css.png" alt="">
+    <div class="skill-subtree ">
+      <div class="logo ">
+        <img src="../assets/icons/img-planet-css.png " alt=" ">
       </div>
-      <div class="skill-subtree-nodes">
-        <div class="skill-subtree-node">
-          <div class="thumbnail">
-            <i class="material-icons">
+      <div class="skill-subtree-nodes ">
+        <div class="skill-subtree-node ">
+          <div class="thumbnail ">
+            <i class="material-icons ">
               flip_to_front
             </i>
           </div>
-          <div class="skills">
-            <div class="recommended">
-              <i class="material-icons">
+          <div class="skills ">
+            <div class="recommended ">
+              <i class="material-icons ">
                 settings
               </i>
               <span>0/4</span>
             </div>
-            <div class="optional">
-              <i class="material-icons">
+            <div class="optional ">
+              <i class="material-icons ">
                 filter_tilt_shift
               </i>
               <span>0/0</span>
             </div>
           </div>
         </div>
-        <div class="skill-subtree-node">
-          <div class="thumbnail">
-            <i class="material-icons">
+        <div class="skill-subtree-node ">
+          <div class="thumbnail ">
+            <i class="material-icons ">
               view_quilt
             </i>
           </div>
-          <div class="skills">
-            <div class="recommended">
-              <i class="material-icons">
+          <div class="skills ">
+            <div class="recommended ">
+              <i class="material-icons ">
                 settings
               </i>
               <span>0/4</span>
             </div>
-            <div class="optional">
-              <i class="material-icons">
+            <div class="optional ">
+              <i class="material-icons ">
                 filter_tilt_shift
               </i>
               <span>0/0</span>
             </div>
           </div>
         </div>
-        <div class="skill-subtree-node">
-          <div class="thumbnail">
-            <i class="material-icons">
+        <div class="skill-subtree-node ">
+          <div class="thumbnail ">
+            <i class="material-icons ">
               developer_board
             </i>
           </div>
-          <div class="skills">
-            <div class="recommended">
-              <i class="material-icons">
+          <div class="skills ">
+            <div class="recommended ">
+              <i class="material-icons ">
                 settings
               </i>
               <span>0/4</span>
             </div>
-            <div class="optional">
-              <i class="material-icons">
+            <div class="optional ">
+              <i class="material-icons ">
                 filter_tilt_shift
               </i>
               <span>0/0</span>
             </div>
           </div>
         </div>
-        <div class="skill-subtree-node">
-          <div class="thumbnail">
-            <i class="material-icons">
+        <div class="skill-subtree-node ">
+          <div class="thumbnail ">
+            <i class="material-icons ">
               devices
             </i>
           </div>
-          <div class="skills">
-            <div class="recommended">
-              <i class="material-icons">
+          <div class="skills ">
+            <div class="recommended ">
+              <i class="material-icons ">
                 settings
               </i>
               <span>0/4</span>
             </div>
-            <div class="optional">
-              <i class="material-icons">
+            <div class="optional ">
+              <i class="material-icons ">
                 filter_tilt_shift
               </i>
               <span>0/0</span>
             </div>
           </div>
         </div>
-        <div class="skill-subtree-node">
-          <div class="thumbnail">
-            <i class="material-icons">
+        <div class="skill-subtree-node ">
+          <div class="thumbnail ">
+            <i class="material-icons ">
               widgets
             </i>
           </div>
-          <div class="skills">
-            <div class="recommended">
-              <i class="material-icons">
+          <div class="skills ">
+            <div class="recommended ">
+              <i class="material-icons ">
                 settings
               </i>
               <span>0/4</span>
             </div>
-            <div class="optional">
-              <i class="material-icons">
+            <div class="optional ">
+              <i class="material-icons ">
                 filter_tilt_shift
               </i>
               <span>0/0</span>
@@ -176,111 +176,111 @@
         </div>
       </div>
     </div>
-    <div class="skill-subtree">
-      <div class="logo">
-        <img src="../assets/icons/img-planet-js.png" alt="">
+    <div class="skill-subtree ">
+      <div class="logo ">
+        <img src="../assets/icons/img-planet-js.png " alt=" ">
       </div>
-      <div class="skill-subtree-nodes">
+      <div class="skill-subtree-nodes ">
 
-        <div class="skill-subtree-node">
-          <div class="thumbnail">
-            <i class="material-icons">
+        <div class="skill-subtree-node ">
+          <div class="thumbnail ">
+            <i class="material-icons ">
               hdr_strong
             </i>
           </div>
-          <div class="skills">
-            <div class="recommended">
-              <i class="material-icons">
+          <div class="skills ">
+            <div class="recommended ">
+              <i class="material-icons ">
                 settings
               </i>
               <span>0/4</span>
             </div>
-            <div class="optional">
-              <i class="material-icons">
+            <div class="optional ">
+              <i class="material-icons ">
                 filter_tilt_shift
               </i>
               <span>0/0</span>
             </div>
           </div>
         </div>
-        <div class="skill-subtree-node">
-          <div class="thumbnail">
-            <i class="material-icons">
+        <div class="skill-subtree-node ">
+          <div class="thumbnail ">
+            <i class="material-icons ">
               gradient
             </i>
           </div>
-          <div class="skills">
-            <div class="recommended">
-              <i class="material-icons">
+          <div class="skills ">
+            <div class="recommended ">
+              <i class="material-icons ">
                 settings
               </i>
               <span>0/4</span>
             </div>
-            <div class="optional">
-              <i class="material-icons">
+            <div class="optional ">
+              <i class="material-icons ">
                 filter_tilt_shift
               </i>
               <span>0/0</span>
             </div>
           </div>
         </div>
-        <div class="skill-subtree-node">
-          <div class="thumbnail">
-            <i class="material-icons">
+        <div class="skill-subtree-node ">
+          <div class="thumbnail ">
+            <i class="material-icons ">
               format_quote
             </i>
           </div>
-          <div class="skills">
-            <div class="recommended">
-              <i class="material-icons">
+          <div class="skills ">
+            <div class="recommended ">
+              <i class="material-icons ">
                 settings
               </i>
               <span>0/4</span>
             </div>
-            <div class="optional">
-              <i class="material-icons">
+            <div class="optional ">
+              <i class="material-icons ">
                 filter_tilt_shift
               </i>
               <span>0/0</span>
             </div>
           </div>
         </div>
-        <div class="skill-subtree-node">
-          <div class="thumbnail">
-            <i class="material-icons">
+        <div class="skill-subtree-node ">
+          <div class="thumbnail ">
+            <i class="material-icons ">
               developer_mode
             </i>
           </div>
-          <div class="skills">
-            <div class="recommended">
-              <i class="material-icons">
+          <div class="skills ">
+            <div class="recommended ">
+              <i class="material-icons ">
                 settings
               </i>
               <span>0/4</span>
             </div>
-            <div class="optional">
-              <i class="material-icons">
+            <div class="optional ">
+              <i class="material-icons ">
                 filter_tilt_shift
               </i>
               <span>0/0</span>
             </div>
           </div>
         </div>
-        <div class="skill-subtree-node">
-          <div class="thumbnail">
-            <i class="material-icons">
+        <div class="skill-subtree-node ">
+          <div class="thumbnail ">
+            <i class="material-icons ">
               nfc
             </i>
           </div>
-          <div class="skills">
-            <div class="recommended">
-              <i class="material-icons">
+          <div class="skills ">
+            <div class="recommended ">
+              <i class="material-icons ">
                 settings
               </i>
               <span>0/4</span>
             </div>
-            <div class="optional">
-              <i class="material-icons">
+            <div class="optional ">
+              <i class="material-icons ">
                 filter_tilt_shift
               </i>
               <span>0/0</span>
@@ -290,69 +290,69 @@
       </div>
 
     </div>
-    <div class="skill-subtree">
-      <div class="logo">
-        <img src="../assets/icons/img-planet-managers.png" alt="">
+    <div class="skill-subtree ">
+      <div class="logo ">
+        <img src="../assets/icons/img-planet-managers.png " alt=" ">
       </div>
-      <div class="skill-subtree-nodes">
+      <div class="skill-subtree-nodes ">
 
-        <div class="skill-subtree-node">
-          <div class="thumbnail">
-            <i class="material-icons">
+        <div class="skill-subtree-node ">
+          <div class="thumbnail ">
+            <i class="material-icons ">
               device_hub
             </i>
           </div>
-          <div class="skills">
-            <div class="recommended">
-              <i class="material-icons">
+          <div class="skills ">
+            <div class="recommended ">
+              <i class="material-icons ">
                 settings
               </i>
               <span>0/4</span>
             </div>
-            <div class="optional">
-              <i class="material-icons">
+            <div class="optional ">
+              <i class="material-icons ">
                 filter_tilt_shift
               </i>
               <span>0/0</span>
             </div>
           </div>
         </div>
-        <div class="skill-subtree-node">
-          <div class="thumbnail">
-            <i class="material-icons">
+        <div class="skill-subtree-node ">
+          <div class="thumbnail ">
+            <i class="material-icons ">
               import_contacts
             </i>
           </div>
-          <div class="skills">
-            <div class="recommended">
-              <i class="material-icons">
+          <div class="skills ">
+            <div class="recommended ">
+              <i class="material-icons ">
                 settings
               </i>
               <span>0/4</span>
             </div>
-            <div class="optional">
-              <i class="material-icons">
+            <div class="optional ">
+              <i class="material-icons ">
                 filter_tilt_shift
               </i>
               <span>0/0</span>
             </div>
           </div>
         </div>
-        <div class="skill-subtree-node">
-          <div class="thumbnail">
-            <i class="material-icons">
+        <div class="skill-subtree-node ">
+          <div class="thumbnail ">
+            <i class="material-icons ">
               table_chart
             </i>
           </div>
-          <div class="skills">
-            <div class="recommended">
-              <i class="material-icons">
+          <div class="skills ">
+            <div class="recommended ">
+              <i class="material-icons ">
                 settings
               </i>
               <span>0/4</span>
             </div>
-            <div class="optional">
-              <i class="material-icons">
+            <div class="optional ">
+              <i class="material-icons ">
                 filter_tilt_shift
               </i>
               <span>0/0</span>
@@ -363,7 +363,7 @@
       </div>
     </div>
   </div>
-  <div class="skill-detail">
+  <div class="skill-detail" [ngClass]="{'inactive': this.currentSkill === null}">
     <app-skill-detail [currentSkill]=this.currentSkill></app-skill-detail>
   </div>
 </div>

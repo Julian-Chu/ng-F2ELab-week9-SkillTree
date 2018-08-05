@@ -10,7 +10,6 @@ import SkillSubtreeNode from "../skills/SkillSubtreeNode";
 export class AppComponent {
   title = "app";
   basics = [new BasicSkills()];
-  basicSkills = new BasicSkills();
   currentSkill: SkillSubtreeNode;
 
   /**
@@ -18,5 +17,13 @@ export class AppComponent {
    */
   constructor() {
     this.currentSkill = this.basics[0];
+  }
+
+  ChangeCurrentSkill(skill: SkillSubtreeNode) {
+    if (this.currentSkill === skill) {
+      this.currentSkill = null;
+    } else {
+      this.currentSkill = skill;
+    }
   }
 }

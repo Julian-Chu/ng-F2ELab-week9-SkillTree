@@ -1,5 +1,6 @@
 enum SkillIcons {
-  BasicSkills = "category"
+  BasicSkills = "category",
+  BasicTools = "build"
 }
 
 export default SkillIcons;

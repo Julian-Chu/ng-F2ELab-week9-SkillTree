@@ -11,28 +11,28 @@
 
 </div>
 <div class="down">
-  <div class="recommended">
-    <i class="material-icons">
+  <div class="recommended" [ngClass]="{'inactive': this.currentSkill===null ||this.currentSkill.recommend.length === 0}">
+    <i class=" material-icons ">
       settings
     </i>
     <div>RECOMMENDED</div>
     <ul>
-      <ng-container *ngFor="let skill of this.currentSkill.recommend">
-        <li [ngClass]="{'active':skill.learned}" (click)="ChangeLearnedRecommend(skill.name, skill.learned)">
+      <ng-container *ngFor="let skill of this.currentSkill?.recommend ">
+        <li [ngClass]="{ 'active':skill.learned} " (click)="ChangeLearnedRecommend(skill.name, skill.learned) ">
           {{skill.name}}
         </li>
       </ng-container>
     </ul>
   </div>
-  <div class="optional" [ngClass]="{'inactive': this.currentSkill.optional.length === 0}">
+  <div class="optional " [ngClass]="{ 'inactive':this.currentSkill===null || this.currentSkill?.optional.length ===0 } ">
 
-    <i class="material-icons">
+    <i class="material-icons ">
       filter_tilt_shift
     </i>
     <div>OPTIONAL</div>
     <ul>
-      <ng-container *ngFor="let skill of this.currentSkill.optional">
-        <li [ngClass]="{'active':skill.learned}" (click)="ChangeLearnedOptional(skill.name, skill.learned)">
+      <ng-container *ngFor="let skill of this.currentSkill?.optional ">
+        <li [ngClass]="{ 'active':skill.learned} " (click)="ChangeLearnedOptional(skill.name, skill.learned) ">
           {{skill.name}}
         </li>
       </ng-container>
