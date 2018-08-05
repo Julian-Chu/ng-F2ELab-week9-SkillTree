@@ -21,6 +21,7 @@ export class AppComponent {
    */
   constructor() {
     this.skillTree.basics = [new BasicSkills(), new BasicTools()];
+    this.skillTree.css = [];
     this.currentSkillSubtree = this.skillTree.basics;
     this.skillTree.currentRank = 0;
   }
