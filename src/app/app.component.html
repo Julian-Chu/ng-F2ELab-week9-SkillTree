@@ -143,6 +143,6 @@
     </div>
   </div>
   <div class="skill-detail" [ngClass]="{'inactive': !this.currentSkill}">
-    <app-skill-detail [currentSkill]="this.currentSkill" (checkCompleted)="CheckCompleted($event)"></app-skill-detail>
+    <app-skill-detail [currentSkill]="this.currentSkill" (checkCompleted)="CheckCompleted()"></app-skill-detail>
   </div>
 </div>
