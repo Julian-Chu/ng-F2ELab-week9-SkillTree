@@ -69,7 +69,6 @@ export class AppComponent {
     let rank = 0;
     const items = ["basics", "css", "javascript", "managers"];
     items.forEach(key => {
-      console.log(this.skillTree[key]);
       const recommended = this.skillTree[key]
         .map(obj => obj.recommend)
         .reduce((a, b) => [...a, ...b]);
@@ -82,6 +81,5 @@ export class AppComponent {
       }
     });
     this.skillTree.currentRank = rank;
-    console.log(rank);
   }
 }
