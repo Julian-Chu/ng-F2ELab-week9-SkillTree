@@ -14,13 +14,15 @@
     </div>
   </div>
   <div class="skill-tree">
-    <div class="skill-subtree">
+    <div class="skill-subtree" [ngClass]="{
+                        'completed': this.skillTree.currentRank >0
+                      }">
       <div class="logo">
         <img src="../assets/icons/img-planet-basics.png" alt="">
       </div>
       <div class="skill-subtree-nodes">
-        <ng-container *ngFor="let skill of this.basics">
-          <div class="skill-subtree-node" [ngClass]="{'active': skill===this.currentSkill}" (click)="ChangeCurrentSkill(skill)">
+        <ng-container *ngFor="let skill of this.skillTree.basics">
+          <div class="skill-subtree-node" [ngClass]="{'active': skill===this.currentSkill}" (click)="this.isBasicsCompleted?null:ChangeCurrentSkill(skill)">
             <div class="thumbnail ">
               <i class="material-icons ">
                 {{skill.icon}}
@@ -46,7 +48,7 @@
         </ng-container>
       </div>
     </div>
-    <div class="skill-subtree completed ">
+    <div class="skill-subtree" [ngClass]="{'completed': this.skillTree.currentRank >1, 'inactive':this.skillTree.currentRank < 1 }">
       <div class="logo ">
         <img src="../assets/icons/img-planet-css.png " alt=" ">
       </div>
@@ -345,7 +347,7 @@
       </div>
     </div>
   </div>
-  <div class="skill-detail" [ngClass]="{'inactive': this.currentSkill === null}">
-    <app-skill-detail [currentSkill]=this.currentSkill></app-skill-detail>
+  <div class="skill-detail" [ngClass]="{'inactive': !this.currentSkill}">
+    <app-skill-detail [currentSkill]="this.currentSkill" (checkCompleted)="CheckCompleted($event)"></app-skill-detail>
   </div>
 </div>
