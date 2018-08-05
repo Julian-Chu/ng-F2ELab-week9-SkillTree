@@ -20,6 +20,25 @@ export class CurrentRankComponent implements OnInit {
       message:
         "Congradulations! You become the “Front-end Beginnner”. Keep searching the resources to upgrade to the next level.",
       src: "../assets/icons/img-ship-beginner.png"
+    },
+    {
+      title: "FRONT-END BEGINNER",
+      message:
+        "Congradulations! You become the “Front-end Beginnner”. Keep searching the resources to upgrade to the next level.",
+      src: "../assets/icons/img-ship-beginner.png"
+    },
+    {
+      title: "FRONT-END DEVELOPER",
+      message:
+        "You’re doing well! Now you’re a “Front-end Developer”. It’s close to complete the upgrading program." +
+        " Next level: Front-end Master.",
+      src: "../assets/icons/img-ship-developer.png"
+    },
+    {
+      title: "FRONT-END MASTER",
+      message:
+        "Excellent! You’re a “Front-end Master” now. But a new galary was just detected by the system. Captain, make your choice. ",
+      src: "../assets/icons/img-ship-master.png"
     }
   ];
   constructor() {}
